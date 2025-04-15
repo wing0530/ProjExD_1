@@ -15,11 +15,14 @@ def main():
     img = pg.image.load("fig/3.png")
     img = pg.transform.flip(img,True,False)
     img_rct = img.get_rect()
-    img_rct.center = 300,200
     tmr = 0
+    img_rct.center = 300,200 
+    x = 0
+    y = 0
     while True:
         for event in pg.event.get():
-            if event.type == pg.QUIT: return
+            if event.type == pg.QUIT:
+                return
         
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
@@ -30,6 +33,9 @@ def main():
             img_rct.move_ip((-1,0))
         if key_lst[pg.K_RIGHT]:
             img_rct.move_ip((+1,0))
+        if not any(key_lst):
+            img_rct.move_ip((-1,0))
+
 
         screen.blit(original1, [-tmr, 0])
         screen.blit(flipped1, [1600-tmr, 0])

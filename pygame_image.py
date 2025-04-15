@@ -16,6 +16,7 @@ def main():
     img = pg.transform.flip(img,True,False)
     img_rct = img.get_rect()
     img_rct.center = 300,200
+    key_lst = pg.key.get_pressed()
     tmr = 0
     while True:
         for event in pg.event.get():

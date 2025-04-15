@@ -22,6 +22,14 @@ def main():
             if event.type == pg.QUIT: return
         
         key_lst = pg.key.get_pressed()
+        if key_lst[pg.K_UP]:
+            img_rct.move_ip((0,-1))
+        if key_lst[pg.K_DOWN]:
+            img_rct.move_ip((0,+1))
+        if key_lst[pg.K_LEFT]:
+            img_rct.move_ip((-1,0))
+        if key_lst[pg.K_RIGHT]:
+            img_rct.move_ip((+1,0))
 
         screen.blit(original1, [-tmr, 0])
         screen.blit(flipped1, [1600-tmr, 0])

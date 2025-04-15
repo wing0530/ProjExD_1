@@ -17,19 +17,16 @@ def main():
     img_rct = img.get_rect()
     tmr = 0
     img_rct.center = 300,200 
-    x = -1
+    x = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
         
         key_lst = pg.key.get_pressed()
-        
-        
-        x=key_lst[pg.K_RIGHT]-key_lst[pg.K_LEFT]-1
-        y=key_lst[pg.K_DOWN]-key_lst[pg.K_UP]
-        
-        img_rct.move_ip((x,y))
+        if not any(key_lst):
+            x=1
+        img_rct.move_ip((key_lst[pg.K_RIGHT]*2-key_lst[pg.K_LEFT]-x,key_lst[pg.K_DOWN]-key_lst[pg.K_UP]))
         
 
 

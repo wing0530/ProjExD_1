@@ -29,6 +29,7 @@ def main():
         clock.tick(1)
 
 
+
 if __name__ == "__main__":
     pg.init()
     main()

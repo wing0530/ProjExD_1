@@ -30,7 +30,6 @@ def main():
         y=key_lst[pg.K_DOWN]-key_lst[pg.K_UP]
         
         img_rct.move_ip((x,y))
-        
 
 
         screen.blit(original1, [-tmr, 0])

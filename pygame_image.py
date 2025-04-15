@@ -21,7 +21,7 @@ def main():
 
         screen.blit(original1, [-tmr, 0])
         screen.blit(flipped1, [1600-tmr, 0])
-        screen.blit(original2, [3200-tmr, 0])
+        screen.blit(original1, [3200-tmr, 0])
         screen.blit(img,[300,200])
         pg.display.update()
         tmr += 1        

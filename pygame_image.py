@@ -38,6 +38,8 @@ def main():
         pg.display.update()
         tmr += 1        
         clock.tick(200)
+        if tmr == 3200:
+            tmr=0
 
 
 if __name__ == "__main__":

@@ -18,23 +18,16 @@ def main():
     tmr = 0
     img_rct.center = 300,200 
     x = 0
-    y = 0
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
         
         key_lst = pg.key.get_pressed()
-        if key_lst[pg.K_UP]:
-            img_rct.move_ip((0,-1))
-        if key_lst[pg.K_DOWN]:
-            img_rct.move_ip((0,+1))
-        if key_lst[pg.K_LEFT]:
-            img_rct.move_ip((-1,0))
-        if key_lst[pg.K_RIGHT]:
-            img_rct.move_ip((+1,0))
         if not any(key_lst):
-            img_rct.move_ip((-1,0))
+            x=1
+        img_rct.move_ip((key_lst[pg.K_RIGHT]*2-key_lst[pg.K_LEFT]-x,key_lst[pg.K_DOWN]-key_lst[pg.K_UP]))
+        
 
 
         screen.blit(original1, [-tmr, 0])

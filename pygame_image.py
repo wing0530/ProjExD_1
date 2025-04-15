@@ -15,6 +15,7 @@ def main():
     img = pg.image.load("fig/3.png")
     img = pg.transform.flip(img,True,False)
     img_rct = img.get_rect()
+    img_rct.center = 300,200
     tmr = 0
     while True:
         for event in pg.event.get():

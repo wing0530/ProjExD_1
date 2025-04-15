@@ -34,7 +34,7 @@ def main():
         screen.blit(original1, [-tmr, 0])
         screen.blit(flipped1, [1600-tmr, 0])
         screen.blit(original2, [3200-tmr, 0])
-        screen.blit(img,[300,200])
+        screen.blit(img,img_rct)
         pg.display.update()
         tmr += 1        
         clock.tick(200)

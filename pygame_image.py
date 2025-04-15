@@ -14,6 +14,7 @@ def main():
     original2 = pg.image.load("fig/pg_bg.jpg")
     img = pg.image.load("fig/3.png")
     img = pg.transform.flip(img,True,False)
+    img_rct = img.get_rect()
     tmr = 0
     while True:
         for event in pg.event.get():

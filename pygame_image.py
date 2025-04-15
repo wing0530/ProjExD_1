@@ -26,7 +26,7 @@ def main():
         key_lst = pg.key.get_pressed()
         
         
-        x=key_lst[pg.K_RIGHT]-key_lst[pg.K_LEFT]-1
+        x=key_lst[pg.K_RIGHT]*2-key_lst[pg.K_LEFT]-1
         y=key_lst[pg.K_DOWN]-key_lst[pg.K_UP]
         
         img_rct.move_ip((x,y))
